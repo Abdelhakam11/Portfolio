@@ -1,0 +1,190 @@
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  background: var(--header-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--t-slow), background var(--t-slow);
+
+  &.scrolled {
+    background: var(--header-bg-scrolled);
+    border-bottom-color: var(--border);
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 1.25rem;
+    height: 60px;
+  }
+}
+
+/* ── Logo ─────────────────────────────────────────────────────────────── */
+.logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--accent);
+  transition: opacity var(--t), text-shadow var(--t);
+
+  &:hover {
+    opacity: 0.85;
+    text-shadow: 0 0 20px var(--accent-glow);
+  }
+}
+
+/* ── Desktop Nav ──────────────────────────────────────────────────────── */
+.navBar {
+  @media (max-width: 768px) { display: none; }
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 0.25rem;
+}
+
+.navItem a {
+  display: block;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--fg-2);
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.2px;
+  transition: color var(--t), background var(--t);
+
+  &:hover {
+    color: var(--fg);
+    background: var(--card-bg-hover);
+  }
+}
+
+/* ── Actions ──────────────────────────────────────────────────────────── */
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* ── Theme Toggle ─────────────────────────────────────────────────────── */
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--fg-2);
+  cursor: pointer;
+  transition: background var(--t), border-color var(--t), color var(--t);
+  overflow: hidden;
+
+  &:hover {
+    background: var(--accent-dim);
+    border-color: var(--border-hi);
+    color: var(--accent);
+  }
+}
+
+/* ── Resume Button ────────────────────────────────────────────────────── */
+.resumeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  border: 1px solid var(--border-hi);
+  border-radius: var(--radius-sm);
+  transition: background var(--t), border-color var(--t), box-shadow var(--t);
+
+  &:hover {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    box-shadow: 0 0 20px var(--accent-glow);
+  }
+
+  @media (max-width: 768px) { display: none; }
+}
+
+/* ── Mobile toggle ────────────────────────────────────────────────────── */
+.mobileMenuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--fg-2);
+  cursor: pointer;
+  padding: 0.45rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--t), color var(--t);
+
+  &:hover { background: var(--card-bg-hover); color: var(--fg); }
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ── Mobile menu ──────────────────────────────────────────────────────── */
+.mobileMenu {
+  position: fixed;
+  top: 60px; left: 0; right: 0; bottom: 0;
+  background: var(--mobile-menu-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  a {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--fg-2);
+    transition: color var(--t);
+    &:hover { color: var(--accent); }
+  }
+}
+
+.mobileResumeLink {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem !important;
+  margin-top: 0.5rem;
+  background: var(--accent) !important;
+  color: var(--bg) !important;
+  border-radius: var(--radius) !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  transition: box-shadow var(--t) !important;
+
+  &:hover {
+    box-shadow: 0 0 32px var(--accent-glow) !important;
+    color: var(--bg) !important;
+  }
+}

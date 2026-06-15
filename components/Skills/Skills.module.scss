@@ -1,0 +1,135 @@
+.skills {
+  padding: 7rem 0;
+  background: var(--bg);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.3;
+  }
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ── Header ───────────────────────────────────────────────────────────── */
+.header {
+  margin-bottom: 4.5rem;
+}
+
+.sectionLabel {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.header h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: var(--fg);
+  letter-spacing: -1px;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.sub {
+  font-size: 1rem;
+  color: var(--fg-2);
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+/* ── Category Rows ────────────────────────────────────────────────────── */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.categoryRow {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-items: start;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+
+  &:first-child { border-top: 1px solid var(--border); }
+
+  @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.catMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-top: 0.1rem;
+}
+
+.catNum {
+  font-size: 0.72rem;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.catTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+/* ── Pills ────────────────────────────────────────────────────────────── */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--fg-2);
+  cursor: default;
+  transition:
+    background var(--t),
+    border-color var(--t),
+    color var(--t);
+  will-change: transform;
+
+  svg {
+    flex-shrink: 0;
+    transition: color var(--t);
+  }
+
+  &:hover {
+    background: rgba(var(--skill-color, 0,229,195), 0.08);
+    border-color: var(--skill-color, var(--accent));
+    color: var(--skill-color, var(--accent));
+
+    svg { color: var(--skill-color, var(--accent)); }
+  }
+}

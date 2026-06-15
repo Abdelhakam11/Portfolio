@@ -1,0 +1,109 @@
+/* ─── Design Tokens — Dark (default) ─────────────────────────────────── */
+:root {
+  --bg:                  #0a0806;
+  --bg-2:                #100d09;
+  --accent:              #f59e0b;
+  --accent-dim:          rgba(245, 158, 11, 0.09);
+  --accent-glow:         rgba(245, 158, 11, 0.28);
+  --fg:                  #faf8f4;
+  --fg-2:                rgba(250, 248, 244, 0.58);
+  --fg-3:                rgba(250, 248, 244, 0.30);
+  --border:              rgba(255, 255, 255, 0.07);
+  --border-hi:           rgba(245, 158, 11, 0.22);
+
+  /* Header surfaces */
+  --header-bg:           rgba(10, 8, 6, 0.72);
+  --header-bg-scrolled:  rgba(10, 8, 6, 0.97);
+  --mobile-menu-bg:      rgba(10, 8, 6, 0.99);
+
+  /* Card surfaces */
+  --card-bg:             rgba(255, 255, 255, 0.025);
+  --card-bg-hover:       rgba(255, 255, 255, 0.045);
+
+  /* Aliases */
+  --primary-color:            var(--fg);
+  --secondary-color:          var(--accent);
+  --background-primary-color: var(--bg);
+
+  /* Shape */
+  --radius-sm: 4px;
+  --radius:    8px;
+  --radius-lg: 12px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-ui:  cubic-bezier(0.4, 0, 0.2, 1);
+  --t:        0.18s var(--ease-ui);
+  --t-slow:   0.36s var(--ease-ui);
+}
+
+/* ─── Light Mode ──────────────────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg:                  #faf7f2;
+  --bg-2:                #f0e9dd;
+  --accent:              #d97706;
+  --accent-dim:          rgba(217, 119, 6, 0.1);
+  --accent-glow:         rgba(217, 119, 6, 0.22);
+  --fg:                  #1a0f00;
+  --fg-2:                rgba(26, 15, 0, 0.62);
+  --fg-3:                rgba(26, 15, 0, 0.38);
+  --border:              rgba(0, 0, 0, 0.09);
+  --border-hi:           rgba(217, 119, 6, 0.28);
+
+  --header-bg:           rgba(250, 247, 242, 0.82);
+  --header-bg-scrolled:  rgba(250, 247, 242, 0.97);
+  --mobile-menu-bg:      rgba(250, 247, 242, 0.99);
+
+  --card-bg:             rgba(0, 0, 0, 0.03);
+  --card-bg-hover:       rgba(0, 0, 0, 0.055);
+}
+
+/* ─── Reset ──────────────────────────────────────────────────────────── */
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Preahvihear", sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.3s ease, color 0.3s ease;
+
+  @media (max-width: 768px) { padding-top: 60px; }
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────── */
+::-webkit-scrollbar          { width: 4px; }
+::-webkit-scrollbar-track    { background: var(--bg); }
+::-webkit-scrollbar-thumb    { background: var(--accent); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-glow); }
+
+/* ─── Base ───────────────────────────────────────────────────────────── */
+h1,h2,h3,h4,h5,h6 { font-weight: 700; line-height: 1.1; }
+a { color: inherit; text-decoration: none; }
+button,input,select,textarea { font-family: inherit; }
+::selection { background: var(--accent-dim); color: var(--fg); }
+
+/* ─── Keyframes ──────────────────────────────────────────────────────── */
+@keyframes pulse-dot {
+  0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,.5); }
+  50%      { box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

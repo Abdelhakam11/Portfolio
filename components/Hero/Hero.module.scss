@@ -1,0 +1,363 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -120px;
+    width: 640px;
+    height: 520px;
+    background: radial-gradient(ellipse at bottom left, var(--accent-glow) 0%, transparent 65%);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 480px;
+    height: 380px;
+    background: radial-gradient(ellipse at top right, var(--accent-glow) 0%, transparent 65%);
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}
+
+/* ── Split layout ─────────────────────────────────────────────────────── */
+.container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 2.5rem 3rem;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    padding: 7rem 1.5rem 3rem;
+    gap: 3rem;
+  }
+}
+
+/* ── Name Column ──────────────────────────────────────────────────────── */
+.nameCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 4rem;
+  border-right: 1px solid var(--border);
+
+  @media (max-width: 900px) {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 3rem;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* ── Photo ────────────────────────────────────────────────────────────── */
+.photoWrap {
+  --size: clamp(180px, 30vw, 300px);
+
+  width: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--accent);
+
+  box-shadow:
+    0 0 0 6px var(--accent-dim),
+    0 16px 48px var(--accent-glow);
+
+  margin-bottom: 1.75rem;
+  flex-shrink: 0;
+
+  transition: box-shadow var(--t-slow);
+
+  &:hover {
+    box-shadow:
+      0 0 0 8px var(--accent-dim),
+      0 20px 56px var(--accent-glow);
+  }
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: center top;
+}
+
+
+/* ── Name ─────────────────────────────────────────────────────────────── */
+.name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2em;
+
+  margin: 0;
+  text-align: center;
+}
+
+.nameFirst,
+.nameLast {
+  font-size: clamp(2rem, 6vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+.nameFirst {
+  color: var(--fg);
+}
+
+.nameLast {
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    #ffd27a,
+    var(--accent)
+  );
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: goldShine 3s linear infinite;
+}
+
+@keyframes goldShine {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+/* ── Decorative Line ──────────────────────────────────────────────────── */
+.nameLine {
+  width: 3rem;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--accent);
+
+  margin-top: 1.5rem;
+}
+
+/* ── Info Column ──────────────────────────────────────────────────────── */
+.infoCol {
+  padding-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+
+  @media (max-width: 900px) {
+    padding-left: 0;
+  }
+}
+
+/* ── Badge ────────────────────────────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.22);
+  border-radius: 50px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: rgb(74, 222, 128);
+  letter-spacing: 0.2px;
+  width: fit-content;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: rgb(34, 197, 94);
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* ── Role ─────────────────────────────────────────────────────────────── */
+.role {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--fg);
+  letter-spacing: -0.3px;
+  margin-bottom: 0.3rem;
+}
+
+.location {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+  font-weight: 500;
+}
+
+/* ── Bio ──────────────────────────────────────────────────────────────── */
+.bio {
+  font-size: 0.94rem;
+  line-height: 1.8;
+  color: var(--fg-2);
+
+  strong { color: var(--fg); font-weight: 600; }
+}
+
+/* ── CTAs ─────────────────────────────────────────────────────────────── */
+.ctas {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 1.5rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.86rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  position: relative;
+  transition: transform var(--t);
+  will-change: transform;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 6px 28px var(--accent-glow);
+    opacity: 0;
+    transition: opacity var(--t);
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    &::after { opacity: 1; }
+  }
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 1.5rem;
+  background: transparent;
+  color: var(--fg-2);
+  font-size: 0.86rem;
+  font-weight: 700;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--t), background var(--t), color var(--t), transform var(--t);
+  will-change: transform;
+
+  &:hover {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
+}
+
+/* ── Stats ────────────────────────────────────────────────────────────── */
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.statNum {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.65rem;
+  color: var(--fg-3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.statSep {
+  width: 1px;
+  height: 34px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* ── Marquee ──────────────────────────────────────────────────────────── */
+.marqueeWrapper {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  padding: 1.1rem 0;
+  mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
+  background: var(--bg-2);
+  position: relative;
+  z-index: 2;
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+
+  &:hover { animation-play-state: paused; }
+}
+
+.marqueeItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2rem;
+  font-size: 0.7rem;
+  color: var(--fg-3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.marqueeDot {
+  color: var(--accent);
+  font-size: 0.38rem;
+  opacity: 0.55;
+}
