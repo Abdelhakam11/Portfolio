@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { workExperience } from "@/data/experience";
+import { withBase } from "@/utils/path";
 import styles from "./WorkExperience.module.scss";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -43,7 +44,7 @@ function WorkExperience() {
                   )}
                   <div className={styles.logoWrap}>
                     <Image
-                      src={exp.logo}
+                      src={withBase(exp.logo)}
                       alt={`${exp.company} logo`}
                       width={90}
                       height={28}

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Download, Mail } from "lucide-react";
 import Image from "next/image";
 import { personal } from "@/data/personal";
+import { withBase } from "@/utils/path";
 import styles from "./Hero.module.scss";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -23,7 +24,7 @@ function Hero() {
         >
           <div className={styles.photoWrap}>
             <Image
-              src={personal.avatar}
+              src={withBase(personal.avatar)}
               alt={personal.name.full}
               width={200}
               height={200}

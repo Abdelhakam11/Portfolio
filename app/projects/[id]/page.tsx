@@ -10,5 +10,6 @@ export default async function ProjectPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  return <ProjectPageClient params={params} />;
+  const { id } = await params;
+  return <ProjectPageClient id={id} />;
 }

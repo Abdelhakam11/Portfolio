@@ -5,6 +5,7 @@ import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { getFeaturedProjects } from "@/data/projects";
+import { withBase } from "@/utils/path";
 import styles from "./Projects.module.scss";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -44,7 +45,7 @@ function Projects() {
               {/* Image */}
               <Link href={`/projects/${project.id}`} className={styles.cardImageWrap}>
                 <Image
-                  src={project.image}
+                  src={withBase(project.image)}
                   alt={project.title}
                   width={700}
                   height={420}

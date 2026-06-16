@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { projects } from "@/data/projects";
+import { withBase } from "@/utils/path";
 import styles from "./ProjectsShowcase.module.scss";
 
 const projectsData = projects;
@@ -80,7 +81,7 @@ function ProjectsShowcase() {
               <div className={styles.imageContainer}>
                 <Link href={`/projects/${project.id}`}>
                   <Image
-                    src={project.image}
+                    src={withBase(project.image)}
                     alt={project.title}
                     width={400}
                     height={250}

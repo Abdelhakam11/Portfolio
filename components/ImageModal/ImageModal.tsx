@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import Image from "next/image";
 import { useEffect } from "react";
+import { withBase } from "@/utils/path";
 import styles from "./ImageModal.module.scss";
 
 interface ImageModalProps {
@@ -72,7 +73,7 @@ export default function ImageModal({
 
             <div className={styles.imageContainer}>
               <Image
-                src={src}
+                src={withBase(src)}
                 alt={alt}
                 fill
                 sizes="(max-width: 768px) 95vw, (max-width: 1200px) 85vw, 75vw"

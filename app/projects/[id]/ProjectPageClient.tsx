@@ -13,20 +13,18 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { use, useState } from "react";
+import { useState } from "react";
 import { getProjectById } from "@/data/projects";
 import ImageModal from "@/components/ImageModal/ImageModal";
+import { withBase } from "@/utils/path";
 import styles from "./page.module.scss";
 
 interface ProjectPageProps {
-  params: Promise<{
-    id: string;
-  }>;
+  id: string;
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const resolvedParams = use(params);
-  const project = getProjectById(parseInt(resolvedParams.id));
+export default function ProjectPage({ id }: ProjectPageProps) {
+  const project = getProjectById(parseInt(id));
   const [modalImage, setModalImage] = useState<{
     src: string;
     alt: string;
@@ -137,13 +135,13 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         >
           <div className={styles.mainImage}>
             <Image
-              src={project.image}
+              src={withBase(project.image)}
               alt={project.title}
               width={1200}
               height={600}
               sizes="(max-width: 767px) 95vw, (max-width: 1199px) 85vw, 75vw"
               className={styles.image}
-              onClick={() => openModal(project.image, project.title)}
+              onClick={() => openModal(withBase(project.image), project.title)}
               style={{ cursor: "pointer" }}
               priority
             />
@@ -153,7 +151,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               {project.images.map((image, index) => (
                 <div key={index} className={styles.thumbnail}>
                   <Image
-                    src={image}
+                    src={withBase(image)}
                     alt={`${project.title} - Screenshot ${index + 1}`}
                     width={400}
                     height={300}
@@ -161,7 +159,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                     className={styles.thumbnailImage}
                     onClick={() =>
                       openModal(
-                        image,
+                        withBase(image),
                         `${project.title} - Screenshot ${index + 1}`
                       )
                     }
