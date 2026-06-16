@@ -51,7 +51,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={preahvihear.className}>
+      <body className={preahvihear.className} suppressHydrationWarning>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

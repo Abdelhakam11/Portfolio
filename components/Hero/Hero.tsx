@@ -1,5 +1,6 @@
 "use client";
 
+import { Fragment } from "react";
 import { motion } from "framer-motion";
 import { Download, Mail } from "lucide-react";
 import Image from "next/image";
@@ -102,13 +103,13 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.75 }}
           >
             {personal.stats.map((s, i) => (
-              <>
-                {i > 0 && <span key={`sep-${i}`} className={styles.statSep} />}
-                <div key={s.label} className={styles.stat}>
+              <Fragment key={s.label}>
+                {i > 0 && <span className={styles.statSep} />}
+                <div className={styles.stat}>
                   <span className={styles.statNum}>{s.value}</span>
                   <span className={styles.statLabel}>{s.label}</span>
                 </div>
-              </>
+              </Fragment>
             ))}
           </motion.div>
 

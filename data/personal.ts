@@ -1,3 +1,5 @@
+import { withBase } from "@/utils/path";
+
 export const personal = {
   name: {
     first: "Abdelhakam",
@@ -10,7 +12,7 @@ export const personal = {
   email:          "abdelhakamelewa.dev@gmail.com",
   bio:            "Building fast, accessible web products with React.js, Next.js, TypeScript & JavaScript — focused on performance and exceptional user experiences.",
   avatar:         "/imgs/Avatar.PNG",
-  cv:             "/abdelhakam_cv.pdf",
+  cv:             withBase("/abdelhakam_cv.pdf"),
   available:      true,
   availableText:  "Open to Opportunities",
 
@@ -30,4 +32,4 @@ export const personal = {
     "Tailwind CSS", "Sass / SCSS", "Material UI",
     "Git & GitHub", "Vite", "REST APIs", "Accessibility",
   ],
-} as const;
+};
