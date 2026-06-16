@@ -125,7 +125,7 @@ function Hero() {
         aria-hidden
       >
         <div className={styles.marqueeTrack}>
-          {[...personal.techStack, ...personal.techStack].map((tech, i) => (
+          {personal.techStack.map((tech, i) => (
             <span key={i} className={styles.marqueeItem}>
               <span className={styles.marqueeDot}>◆</span>
               {tech}

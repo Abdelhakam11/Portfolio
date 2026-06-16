@@ -15,18 +15,6 @@
     background: linear-gradient(90deg, transparent, rgba(245,158,11,0.18), transparent);
   }
 
-  /* Bottom ambient glow */
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 600px;
-    height: 400px;
-    background: radial-gradient(ellipse at top, rgba(245,158,11,0.06) 0%, transparent 65%);
-    pointer-events: none;
-  }
 }
 
 .container {
