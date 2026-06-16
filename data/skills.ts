@@ -1,5 +1,5 @@
 import {
-  SiReact, SiNextdotjs, SiTypescript, SiJavascript, SiHtml5, SiCss3,
+  SiReact, SiNextdotjs, SiTypescript, SiJavascript, SiHtml5, SiCss,
   SiTailwindcss, SiBootstrap, SiSass, SiMui,
   SiGit, SiNpm, SiVite, SiWebpack, SiJira,
 } from "react-icons/si";
@@ -27,7 +27,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "TypeScript", icon: SiTypescript,  color: "#3178c6" },
       { name: "JavaScript", icon: SiJavascript,  color: "#f7df1e" },
       { name: "HTML5",      icon: SiHtml5,       color: "#e34f26" },
-      { name: "CSS3",       icon: SiCss3,        color: "#1572b6" },
+      { name: "CSS3",       icon: SiCss,         color: "#1572b6" },
     ],
   },
   {
