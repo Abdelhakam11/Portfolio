@@ -6,18 +6,19 @@ export const personal = {
     last:  "Elewa",
     full:  "Abdelhakam Elewa",
   },
-  role:           "Frontend Software Engineer",
+  role:           "Full Stack Developer",
   location:       "Cairo, Egypt",
   locationDetail: "Cairo, Egypt · Remote Available",
   email:          "abdelhakamelewa.dev@gmail.com",
-  bio:            "Building fast, accessible web products with React.js, Next.js, TypeScript & JavaScript — focused on performance and exceptional user experiences.",
+  phone:          "+201090125176",
+  bio:            "Full Stack Developer with 2+ years of experience building scalable web applications using React.js, Next.js, TypeScript & Node.js — focused on RESTful APIs, authentication systems, and performance optimization.",
   avatar:         "/imgs/Avatar.PNG",
   cv:             withBase("/abdelhakam_cv.pdf"),
   available:      true,
   availableText:  "Open to Opportunities",
 
   stats: [
-    { value: "3+", label: "Years Exp"      },
+    { value: "2+", label: "Years Exp"      },
     { value: "5+", label: "Projects Built" },
     { value: "4",  label: "Companies"      },
   ],
@@ -28,7 +29,7 @@ export const personal = {
   },
 
   techStack: [
-    "React.js", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3",
+    "React.js", "Next.js", "TypeScript", "JavaScript", "Node.js", "HTML5", "CSS3",
     "Tailwind CSS", "Sass / SCSS", "Material UI",
     "Git & GitHub", "Vite", "REST APIs", "Accessibility",
   ],

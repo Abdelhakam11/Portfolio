@@ -1,6 +1,7 @@
 import {
   SiReact, SiNextdotjs, SiTypescript, SiJavascript, SiHtml5, SiCss,
   SiTailwindcss, SiBootstrap, SiSass, SiMui,
+  SiNodedotjs, SiExpress, SiMongodb, SiPostman, SiJsonwebtokens,
   SiGit, SiNpm, SiVite, SiWebpack, SiJira,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
@@ -42,6 +43,17 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     num:   "03",
+    title: "Backend & APIs",
+    skills: [
+      { name: "Node.js",     icon: SiNodedotjs,      color: "#339933" },
+      { name: "Express.js",  icon: SiExpress,        color: "#ffffff" },
+      { name: "MongoDB",     icon: SiMongodb,        color: "#47a248" },
+      { name: "JWT Auth",    icon: SiJsonwebtokens,  color: "#ffffff" },
+      { name: "Postman",     icon: SiPostman,        color: "#ff6c37" },
+    ],
+  },
+  {
+    num:   "04",
     title: "Tools & Workflow",
     skills: [
       { name: "Git & GitHub", icon: SiGit,     color: "#f05032" },
