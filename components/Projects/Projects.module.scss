@@ -1,5 +1,5 @@
 .section {
-  padding: 7rem 0;
+  padding: var(--section-y) 0;
   background: var(--bg);
   position: relative;
 }
@@ -7,12 +7,14 @@
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--gutter);
 }
 
 /* ── Header ───────────────────────────────────────────────────────────── */
 .header {
   margin-bottom: 3.5rem;
+
+  @media (max-width: 720px) { margin-bottom: 2rem; }
 }
 
 .sectionLabel {
@@ -155,6 +157,8 @@
 /* ── Card Content ─────────────────────────────────────────────────────── */
 .cardContent {
   padding: 1.5rem;
+
+  @media (max-width: 720px) { padding: 1.25rem; }
   display: flex;
   flex-direction: column;
   gap: 0.75rem;

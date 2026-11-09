@@ -1,5 +1,7 @@
 .hero {
   min-height: 100vh;
+
+  @media (max-width: 900px) { min-height: auto; }
   display: flex;
   flex-direction: column;
   background: var(--bg);
@@ -36,9 +38,9 @@
   flex: 1;
   display: grid;
   grid-template-columns: 42% 1fr;
-  max-width: 1200px;
+  max-width: var(--content-max);
   margin: 0 auto;
-  padding: 8rem 2.5rem 3rem;
+  padding: 8rem var(--gutter) 3rem;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -46,8 +48,8 @@
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
-    padding: 7rem 1.5rem 3rem;
-    gap: 3rem;
+    padding: 6rem var(--gutter) 2.5rem;
+    gap: 2rem;
   }
 }
 
@@ -63,7 +65,7 @@
     padding-right: 0;
     border-right: none;
     border-bottom: 1px solid var(--border);
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     align-items: center;
     text-align: center;
   }
@@ -315,6 +317,10 @@
   letter-spacing: 1.2px;
 }
 
+.stats {
+  @media (max-width: 420px) { gap: 0.9rem; justify-content: space-between; }
+}
+
 .statSep {
   width: 1px;
   height: 34px;
@@ -325,7 +331,7 @@
 /* ── Marquee ──────────────────────────────────────────────────────────── */
 .marqueeWrapper {
   border-top: 1px solid var(--border);
-  padding: 1.25rem 2.5rem;
+  padding: 1.25rem var(--gutter);
   background: var(--bg-2);
   position: relative;
   z-index: 2;
@@ -336,7 +342,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
-  max-width: 1200px;
+  max-width: var(--content-max);
   margin: 0 auto;
 }
 

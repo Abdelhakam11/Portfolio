@@ -107,3 +107,15 @@ button,input,select,textarea { font-family: inherit; }
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
+/* ── Layout tokens: one content width + gutter shared by header & sections ── */
+:root {
+  --content-max: 1100px;
+  --gutter: 2rem;
+  --section-y: 7rem;
+}
+@media (max-width: 720px) {
+  :root {
+    --gutter: 1.25rem;
+    --section-y: 4rem;
+  }
+}

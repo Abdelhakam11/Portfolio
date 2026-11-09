@@ -2,16 +2,21 @@
   min-height: 100vh;
   padding: 6rem 0 4rem;
   background: var(--bg);
+
+  /* body already reserves 60px for the header on mobile; this page has none */
+  @media (max-width: 768px) { padding: 1.5rem 0 2.5rem; }
 }
 
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--gutter);
 }
 
 .backButton {
   margin-bottom: 3rem;
+
+  @media (max-width: 720px) { margin-bottom: 1.75rem; }
 }
 
 .backLink {
@@ -32,6 +37,8 @@
 .projectHeader {
   text-align: center;
   margin-bottom: 4rem;
+
+  @media (max-width: 720px) { margin-bottom: 2.5rem; }
 }
 
 .projectMeta {
@@ -85,6 +92,8 @@
   line-height: 1.75;
   max-width: 720px;
   margin: 0 auto 2.5rem;
+
+  @media (max-width: 720px) { font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.75rem; }
   color: var(--fg-2);
 }
 
@@ -129,6 +138,8 @@
 
 .projectImages {
   margin-bottom: 5rem;
+
+  @media (max-width: 720px) { margin-bottom: 3rem; }
 }
 
 .mainImage {
@@ -186,6 +197,8 @@
   display: grid;
   gap: 4rem;
   margin-bottom: 5rem;
+
+  @media (max-width: 720px) { gap: 2.5rem; margin-bottom: 3rem; }
 }
 
 .detailSection {
@@ -315,6 +328,8 @@
 .nextProject {
   text-align: center;
   padding: 3rem 2rem;
+
+  @media (max-width: 720px) { padding: 2rem var(--gutter); }
   background: rgba(255,255,255,0.02);
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);

@@ -1,5 +1,7 @@
 .contact {
-  padding: 7rem 0 4rem;
+  padding: var(--section-y) 0 4rem;
+
+  @media (max-width: 720px) { padding-bottom: 2.5rem; }
   background: var(--bg-2);
   position: relative;
   text-align: center;
@@ -20,7 +22,7 @@
 .container {
   max-width: 640px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--gutter);
   position: relative;
   z-index: 2;
 }
@@ -28,6 +30,8 @@
 /* ── Header ───────────────────────────────────────────────────────────── */
 .header {
   margin-bottom: 3.5rem;
+
+  @media (max-width: 720px) { margin-bottom: 2rem; }
 }
 
 .sectionLabel {
@@ -62,6 +66,8 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 1.5rem 2rem;
+
+  @media (max-width: 500px) { padding: 1rem; }
 }
 
 .emailRow {
@@ -104,7 +110,14 @@
     &::after { opacity: 1; }
   }
 
-  @media (max-width: 500px) { width: 100%; justify-content: center; }
+  @media (max-width: 500px) {
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+    text-align: center;
+  }
 }
 
 .copyButton {
@@ -134,6 +147,8 @@
   justify-content: center;
   gap: 0.65rem;
   margin-bottom: 4.5rem;
+
+  @media (max-width: 720px) { margin-bottom: 2.5rem; }
   flex-wrap: wrap;
 }
 
