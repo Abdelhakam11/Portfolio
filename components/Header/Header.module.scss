@@ -6,8 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* full-width bar, contents aligned with the --content-max container */
-  padding: 0 max(var(--gutter), calc((100% - var(--content-max)) / 2 + var(--gutter)));
+  padding: 0 2.5rem;
   background: var(--header-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -20,6 +19,7 @@
   }
 
   @media (max-width: 768px) {
+    padding: 0 1.25rem;
     height: 60px;
   }
 }
