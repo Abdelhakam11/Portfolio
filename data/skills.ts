@@ -1,8 +1,8 @@
 import {
   SiReact, SiNextdotjs, SiTypescript, SiJavascript, SiHtml5, SiCss,
   SiTailwindcss, SiBootstrap, SiSass, SiMui,
-  SiNodedotjs, SiExpress, SiMongodb, SiPostman, SiJsonwebtokens,
-  SiGit, SiNpm, SiVite, SiWebpack, SiJira,
+  SiPhp, SiLaravel, SiSymfony, SiMysql,
+  SiGit, SiGithub, SiDocker, SiNpm, SiWebpack, SiJira,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 
@@ -21,18 +21,28 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
   {
     num:   "01",
-    title: "Frontend Core",
+    title: "Backend",
     skills: [
-      { name: "React.js",   icon: SiReact,      color: "#61dafb" },
-      { name: "Next.js",    icon: SiNextdotjs,  color: "#ffffff" },
-      { name: "TypeScript", icon: SiTypescript,  color: "#3178c6" },
-      { name: "JavaScript", icon: SiJavascript,  color: "#f7df1e" },
-      { name: "HTML5",      icon: SiHtml5,       color: "#e34f26" },
-      { name: "CSS3",       icon: SiCss,         color: "#1572b6" },
+      { name: "PHP",       icon: SiPhp,     color: "#777bb4" },
+      { name: "Laravel",   icon: SiLaravel, color: "#ff2d20" },
+      { name: "Symfony",   icon: SiSymfony, color: "#ffffff" },
+      { name: "MySQL",     icon: SiMysql,   color: "#4479a1" },
     ],
   },
   {
     num:   "02",
+    title: "Frontend",
+    skills: [
+      { name: "React.js",   icon: SiReact,      color: "#61dafb" },
+      { name: "Next.js",    icon: SiNextdotjs,  color: "#ffffff" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3178c6" },
+      { name: "JavaScript", icon: SiJavascript, color: "#f7df1e" },
+      { name: "HTML5",      icon: SiHtml5,      color: "#e34f26" },
+      { name: "CSS3",       icon: SiCss,        color: "#1572b6" },
+    ],
+  },
+  {
+    num:   "03",
     title: "Styling & UI",
     skills: [
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06b6d4" },
@@ -42,25 +52,15 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    num:   "03",
-    title: "Backend & APIs",
-    skills: [
-      { name: "Node.js",     icon: SiNodedotjs,      color: "#339933" },
-      { name: "Express.js",  icon: SiExpress,        color: "#ffffff" },
-      { name: "MongoDB",     icon: SiMongodb,        color: "#47a248" },
-      { name: "JWT Auth",    icon: SiJsonwebtokens,  color: "#ffffff" },
-      { name: "Postman",     icon: SiPostman,        color: "#ff6c37" },
-    ],
-  },
-  {
     num:   "04",
     title: "Tools & Workflow",
     skills: [
-      { name: "Git & GitHub", icon: SiGit,     color: "#f05032" },
-      { name: "NPM",          icon: SiNpm,     color: "#cb3837" },
-      { name: "Vite",         icon: SiVite,    color: "#646cff" },
-      { name: "Webpack",      icon: SiWebpack, color: "#8dd6f9" },
-      { name: "Jira",         icon: SiJira,    color: "#0052cc" },
+      { name: "Git",     icon: SiGit,     color: "#f05032" },
+      { name: "GitHub",  icon: SiGithub,  color: "#ffffff" },
+      { name: "Docker",  icon: SiDocker,  color: "#2496ed" },
+      { name: "NPM",     icon: SiNpm,     color: "#cb3837" },
+      { name: "Webpack", icon: SiWebpack, color: "#8dd6f9" },
+      { name: "Jira",    icon: SiJira,    color: "#0052cc" },
     ],
   },
 ];

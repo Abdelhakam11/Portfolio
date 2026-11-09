@@ -197,4 +197,9 @@
   line-height: 1.7;
   color: var(--fg-2);
   margin: 0;
+
+  strong {
+    color: var(--fg);
+    font-weight: 700;
+  }
 }

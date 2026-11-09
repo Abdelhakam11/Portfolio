@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Abdelhakam Elewa – Software Engineer CV</title>
+<meta name="author" content="Abdelhakam Elewa">
+<meta name="description" content="Software Engineer | PHP, Laravel, React.js & Next.js">
+<!--
+  Source of truth for the CV. Regenerate the PDF with:
+    ./cv/build-cv.sh            (writes public/abdelhakam_cv.pdf)
+-->
+<style>
+  @page { size: Letter; margin: 0.5in 0.6in 0.5in 0.6in; }
+  :root {
+    --teal: #2a7480;
+    --ink: #1f2328;
+    --muted: #555b61;
+    --rule: #9aa3a8;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  body, header, .serif-body { font-variant-numeric: lining-nums; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.33;
+    color: var(--ink);
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* ---------- Original-design parts: header, Profile, Skills, Languages (serif) ---------- */
+  .serif { font-family: Georgia, "Times New Roman", serif; }
+  header { margin-bottom: 4pt; font-family: Georgia, "Times New Roman", serif; }
+  .name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 27pt;
+    color: var(--teal);
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: 0.2pt;
+  }
+  .headline { font-size: 11pt; margin: 2pt 0 4pt; color: var(--ink); }
+  .rule { border: 0; border-top: 0.75pt solid #6f777c; margin: 0 0 4pt; }
+  .contact { font-size: 8.8pt; line-height: 1.3; color: var(--muted); margin: 0; }
+  .contact a { color: var(--muted); }
+  .contact a.u { text-decoration: underline; text-underline-offset: 1.2pt; }
+  .serif-body { font-family: Georgia, "Times New Roman", serif; font-size: 9.6pt; line-height: 1.3; }
+
+  /* ---------- Sections ---------- */
+  section { margin-top: 9pt; }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 14pt;
+    color: var(--teal);
+    margin: 0 0 2pt;
+    break-after: avoid;
+  }
+  p { margin: 0; }
+
+  /* ---------- Experience ---------- */
+  .job { margin-top: 8pt; }
+  .job:first-of-type { margin-top: 4pt; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8pt; }
+  .company { font-weight: 700; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.2pt; }
+  .company .loc { font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--muted); }
+  .dates { font-size: 9.6pt; color: var(--muted); white-space: nowrap; }
+  .role { font-style: italic; font-size: 10pt; margin-top: 1pt; }
+  .intro { margin-top: 2pt; color: var(--ink); }
+
+  .project { margin-top: 4pt; break-inside: avoid; }
+  .project-title { font-weight: 700; font-size: 10pt; color: var(--teal); }
+  .project-title .meta { font-weight: 400; color: var(--muted); }
+  .project-title a { text-decoration: underline; text-underline-offset: 1.5pt; }
+
+  ul { margin: 2pt 0 0; padding-left: 13pt; }
+  li { margin: 0.5pt 0; padding-left: 1pt; }
+  li::marker { color: var(--teal); }
+
+  /* ---------- Skills ---------- */
+  ul.skills { columns: 2; column-gap: 24pt; list-style: none; padding-left: 0; margin: 2pt 0 0; }
+  ul.skills li { margin: 0; padding-left: 9pt; text-indent: -9pt; break-inside: avoid; }
+  ul.skills li::before { content: "•"; display: inline-block; width: 9pt; text-indent: 0; }
+
+  /* ---------- Small sections ---------- */
+  .edu-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24pt; }
+  .inline-list { margin-top: 2pt; }
+  .link { color: var(--teal); text-decoration: underline; text-underline-offset: 1.5pt; }
+
+  .page-break-before { break-before: page; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="name">Abdelhakam Elewa</h1>
+  <p class="headline">Software Engineer | PHP, Laravel, React.js &amp; Next.js</p>
+  <hr class="rule">
+  <p class="contact">Cairo, Egypt</p>
+  <p class="contact"><a href="tel:+201090125176">+201090125176</a></p>
+  <p class="contact"><a class="u" href="mailto:abdelhakamelewa.dev@gmail.com">abdelhakamelewa.dev@gmail.com</a></p>
+  <p class="contact"><a href="https://www.linkedin.com/in/abdelhakam-elewa-78613a205/">https://www.linkedin.com/in/abdelhakam-elewa-78613a205/</a></p>
+  <p class="contact"><a href="https://github.com/Abdelhakam11">https://github.com/Abdelhakam11</a></p>
+</header>
+
+<section>
+  <h2>Profile</h2>
+  <p class="serif-body">
+    Full Stack Software Engineer with approximately 3 years of professional experience building web applications
+    across backend and frontend. Develops backend features with PHP and Laravel — RESTful APIs, business logic,
+    authentication, and database-driven workflows — and builds user interfaces with React.js, Next.js, and TypeScript.
+    Has contributed to commercial business platforms in Saudi Arabia and to international multi-region e-commerce
+    platforms, working end to end from data layer and API integration to responsive, accessible UI.
+  </p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <!-- PRISMATECS -->
+  <div class="job">
+    <div class="job-head">
+      <span class="company">Prismatecs <span class="loc">| Cairo, Egypt (Hybrid)</span></span>
+      <span class="dates">Nov 2025 – Present</span>
+    </div>
+    <div class="role">Full Stack Software Engineer</div>
+    <p class="intro">Full-stack development of commercial web applications using PHP, Laravel, and JavaScript.</p>
+
+    <div class="project">
+      <div class="project-title">Rafed <span class="meta">— Platform for charitable associations, Saudi Arabia</span></div>
+      <ul>
+        <li>Contributed to developing a platform that serves charitable associations across Saudi Arabia.</li>
+        <li>Built backend features and application functionality with PHP and Laravel, including business logic, database operations, and application workflows.</li>
+        <li>Developed and maintained application features in JavaScript, and contributed to API integrations and frontend/backend communication.</li>
+        <li>Worked on digital services and solutions associated with the Two Holy Mosques — Al-Masjid Al-Haram (Makkah), including services related to the Holy Kaaba, and Al-Masjid An-Nabawi (Madinah).</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Brassbell <span class="meta">— Property Management System (PMS)</span></div>
+      <ul>
+        <li>Contributed to developing a Property Management System, implementing application features and backend business logic.</li>
+        <li>Implemented data-related operations, application workflows, and frontend/backend integration.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Teckdo <span class="meta">— Content Management System (CMS)</span></div>
+      <ul>
+        <li>Currently contributing to building a Content Management System, working on backend functionality, application structure, and core features.</li>
+        <li>Developing and integrating features across the backend and frontend.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SCANDIWEB -->
+  <div class="job">
+    <div class="job-head">
+      <span class="company">Scandiweb <span class="loc">| Latvia (Remote)</span></span>
+      <span class="dates">Aug 2024 – Oct 2025</span>
+    </div>
+    <div class="role">Software Engineer</div>
+    <p class="intro">Developed features for international e-commerce applications: frontend development, CMS integration, reusable components, and application functionality.</p>
+
+    <div class="project">
+      <div class="project-title">OM System / OMdigital <span class="meta">— <a href="https://explore.omsystem.com/">explore.omsystem.com</a></span></div>
+      <ul>
+        <li>Worked on an international multi-region, multi-language e-commerce platform supporting approximately 70 store views and 20+ languages.</li>
+        <li>Developed reusable React.js and TypeScript components and contributed to component architecture and data-fetching workflows.</li>
+        <li>Integrated frontend functionality with Sanity CMS, working with 55+ reusable content blocks, content structures, and image crop/hotspot functionality.</li>
+        <li>Worked on Product Listing Pages (PLP) and Product Detail Pages (PDP).</li>
+        <li>Improved responsive layouts, accessibility, and frontend performance.</li>
+        <li>Developed and maintained responsive email templates across three regional websites.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Purdy's Chocolatier <span class="meta">— <a href="https://www.purdys.com/">purdys.com</a></span></div>
+      <ul>
+        <li>Developed and maintained features for an international e-commerce platform, including homepage sections, reusable components, and header/footer functionality.</li>
+        <li>Implemented authentication features (sign-in and sign-out) and worked on customer dashboard functionality.</li>
+        <li>Integrated frontend features with backend services and APIs, and maintained and improved existing business functionality.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MMD -->
+  <div class="job">
+    <div class="job-head">
+      <span class="company">Moseley Media Development (MMD) <span class="loc">| Cairo, Egypt</span></span>
+      <span class="dates">May 2024 – Jul 2024</span>
+    </div>
+    <div class="role">Software Engineer Intern</div>
+    <ul>
+      <li>Gained practical backend development experience with PHP and Symfony on web application development.</li>
+      <li>Developed and maintained application features, working with backend business logic and database operations.</li>
+      <li>Integrated APIs and connected application components.</li>
+      <li>Assisted with debugging, testing, and maintaining existing functionality.</li>
+    </ul>
+  </div>
+
+  <!-- FREELANCE -->
+  <div class="job">
+    <div class="job-head">
+      <span class="company">Freelance <span class="loc">| Remote</span></span>
+      <span class="dates">Jun 2022 – Apr 2024</span>
+    </div>
+    <div class="role">Software Engineer</div>
+    <ul>
+      <li>Built websites and web applications for different clients, managing tasks from requirements and implementation to delivery.</li>
+      <li>Developed interactive, responsive interfaces and reusable components with React.js, JavaScript, HTML5, and CSS3.</li>
+      <li>Integrated REST APIs and third-party services, connecting frontend applications with backend services.</li>
+      <li>Maintained and improved existing client applications.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Technical Skills</h2>
+  <ul class="skills serif-body">
+    <li>PHP</li>
+    <li>Laravel</li>
+    <li>Symfony</li>
+    <li>RESTful API Development</li>
+    <li>MVC Architecture</li>
+    <li>Authentication &amp; Authorization</li>
+    <li>Backend Business Logic</li>
+    <li>API Integration</li>
+    <li>MySQL</li>
+    <li>Database Design</li>
+    <li>React.js</li>
+    <li>Next.js</li>
+    <li>TypeScript</li>
+    <li>JavaScript (ES6+)</li>
+    <li>HTML5</li>
+    <li>CSS3</li>
+    <li>Tailwind CSS</li>
+    <li>Bootstrap</li>
+    <li>Sass / SCSS</li>
+    <li>Material UI</li>
+    <li>CSS Modules</li>
+    <li>Responsive Web Design</li>
+    <li>Performance Optimization</li>
+    <li>Lazy Loading</li>
+    <li>Code Splitting</li>
+    <li>Reusable Component Architecture</li>
+    <li>Accessibility (WCAG)</li>
+    <li>Semantic HTML</li>
+    <li>Git &amp; GitHub</li>
+    <li>Docker</li>
+    <li>NPM</li>
+    <li>Webpack</li>
+    <li>Jira</li>
+    <li>Agile / Scrum</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="edu-head">
+    <span><b>Bachelor of Engineering – Mechanical Power Engineering</b>, Menoufia University</span>
+    <span class="dates">Sep 2018 – Jun 2023</span>
+  </div>
+</section>
+
+<section>
+  <h2>Languages</h2>
+  <p class="serif-body">Arabic: Native</p>
+  <p class="serif-body">English: Advanced</p>
+</section>
+
+</body>
+</html>

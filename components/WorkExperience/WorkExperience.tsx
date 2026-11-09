@@ -8,6 +8,13 @@ import styles from "./WorkExperience.module.scss";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
+// Renders **bold** segments in experience descriptions.
+function renderRich(text: string) {
+  return text.split(/\*\*(.+?)\*\*/g).map((part, i) =>
+    i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+  );
+}
+
 function WorkExperience() {
   return (
     <section className={styles.section}>
@@ -59,7 +66,7 @@ function WorkExperience() {
                 <h3 className={styles.cardTitle}>{exp.title}</h3>
                 <p className={styles.cardCompany}>{exp.company}</p>
                 <p className={styles.cardMeta}>{exp.location} · {exp.period}</p>
-                <p className={styles.cardDesc}>{exp.description}</p>
+                <p className={styles.cardDesc}>{renderRich(exp.description)}</p>
               </div>
             </motion.div>
           ))}

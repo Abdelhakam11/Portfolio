@@ -6,6 +6,7 @@ export interface WorkExperience {
   location:    string;
   period:      string;
   current:     boolean;
+  /** Plain text; wrap a phrase in **double asterisks** to render it bold. */
   description: string;
   color:       string;
   logo:        string;
@@ -15,52 +16,52 @@ export const workExperience: WorkExperience[] = [
   {
     id:      1,
     num:     "01",
-    title:   "Full Stack Developer (React & Node.js)",
+    title:   "Full Stack Software Engineer",
     company: "Prismatecs",
     location: "Cairo, Egypt · Hybrid",
     period:  "Nov 2025 – Present",
     current: true,
     description:
-      "Develop scalable full-stack applications using React.js, Next.js, TypeScript, and Node.js. Build and consume RESTful APIs, design reusable frontend components integrated with backend services, implement authentication and authorization for secure user access, and optimize performance through code splitting, lazy loading, and efficient API handling.",
+      "Full-stack development of commercial applications with PHP, Laravel, and JavaScript. Rafed — a platform serving charitable associations in Saudi Arabia, including digital services associated with the Two Holy Mosques (**Al-Masjid Al-Haram, Makkah, and Al-Masjid An-Nabawi, Madinah**): backend features, business logic, database operations, and API integrations. Brassbell — a Property Management System (PMS): application features, backend logic, and frontend/backend integration. Teckdo — a Content Management System (CMS) currently in development: backend functionality and core features.",
     color: "#f59e0b",
     logo:  "/logo_prismatecs.png",
   },
   {
     id:      2,
     num:     "02",
-    title:   "Full Stack Developer (React & Node.js)",
+    title:   "Software Engineer",
     company: "Scandiweb",
     location: "Latvia · Remote",
     period:  "Aug 2024 – Oct 2025",
     current: false,
     description:
-      "Developed full-stack features using React.js and Node.js-based services for international e-commerce clients (explore.omsystem.com, purdys.com). Built and integrated REST APIs, contributed to authentication systems, dashboards, and secure workflows, and integrated applications with Sanity CMS and third-party services. Improved scalability and performance through optimized rendering and API usage, and collaborated with QA, DevOps, and business teams in Agile environments.",
+      "Built features for international e-commerce platforms. OM System / OMdigital (explore.omsystem.com) — a multi-region, multi-language store with ~70 store views and 20+ languages: reusable React.js and TypeScript components, Sanity CMS integration across 55+ content blocks, PLP/PDP work, accessibility and performance improvements, and responsive email templates for three regional sites. Purdy's Chocolatier (purdys.com) — homepage sections, header/footer, sign-in/sign-out, dashboard functionality, and API integrations.",
     color: "#818cf8",
     logo:  "/logo_scandiweb.png",
   },
   {
     id:      3,
     num:     "03",
-    title:   "Full Stack Developer (React & Node.js)",
+    title:   "Software Engineer Intern",
     company: "Moseley Media Development",
     location: "Cairo, Egypt",
     period:  "May – Jul 2024",
     current: false,
     description:
-      "Developed full-stack web applications using React.js and Node.js fundamentals. Built and integrated API-driven features for dynamic content delivery, designed responsive user interfaces connected to backend services, and assisted in testing, debugging, and performance improvements.",
+      "Gained practical backend experience with PHP and Symfony. Developed and maintained application features, worked with backend business logic and database operations, integrated APIs, and assisted with debugging, testing, and maintenance.",
     color: "#38bdf8",
     logo:  "/logo_mmd.jpeg",
   },
   {
     id:      4,
     num:     "04",
-    title:   "Freelance Full Stack Developer",
-    company: "Freelancer",
+    title:   "Software Engineer",
+    company: "Freelance",
     location: "Remote",
     period:  "Jun 2022 – Apr 2024",
     current: false,
     description:
-      "Built full-stack applications for various clients using React, JavaScript, and Node.js-based backend services. Developed RESTful APIs and integrated third-party platforms, delivering responsive, user-focused interfaces with scalable backend logic and managing end-to-end development from UI implementation to backend integration.",
+      "Built websites and web applications for different clients using React.js, JavaScript, HTML5, and CSS3. Developed reusable components, integrated REST APIs and third-party services, connected frontends to backend services, and managed work from requirements to delivery.",
     color: "#fb923c",
     logo:  "/logo_upwork.png",
   },

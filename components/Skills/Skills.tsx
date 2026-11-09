@@ -21,8 +21,8 @@ function Skills() {
           <span className={styles.sectionLabel}>Expertise</span>
           <h2>Skills &amp; Technologies</h2>
           <p className={styles.sub}>
-            Frontend-focused, with a deep understanding of modern tooling,
-            accessible design, and performance-first development.
+            Full-stack: PHP &amp; Laravel on the backend, React.js &amp; Next.js
+            on the frontend — with a focus on clean APIs, accessibility, and performance.
           </p>
         </motion.div>
 

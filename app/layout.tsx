@@ -11,13 +11,16 @@ const preahvihear = Preahvihear({
 
 export const metadata: Metadata = {
   title: {
-    default: "Abdelhakam Elewa - Frontend Software Engineer",
+    default: "Abdelhakam Elewa - Software Engineer | PHP, Laravel, React.js & Next.js",
     template: "%s | Abdelhakam Elewa",
   },
   description:
-    "Frontend Software Engineer with 3+ years of experience building modern, scalable, and high-performance web applications using React.js, Next.js, TypeScript, and JavaScript.",
+    "Full Stack Software Engineer with ~3 years of experience building web applications with PHP, Laravel, React.js, Next.js, and TypeScript.",
   keywords: [
-    "frontend developer",
+    "software engineer",
+    "full stack developer",
+    "php",
+    "laravel",
     "react",
     "nextjs",
     "typescript",
